@@ -1,43 +1,31 @@
-# Blue Archive Random Images
+# 🌸 ShadowX Blue-Archive Image
 
-This repository is simply for storing random images of Blue Archive characters. No fancy functions here!
+A simple collection of **Blue Archive** character images. 🖼️💙
 
-## Why?
+## 📁 Usage
 
-Because sometimes you just want to look at cute pictures from [Blue Archive](https://bluearchive.nexon.com/) without having to scour the entire internet.
+Browse images in the `images/` folder or access them through:
 
-## How to use?
-
-1.  **View images:** Browse the [`images`](./images) folder to see all the images directly.
-2.  **Access images with code:** You can fetch the images using the `links.json` file (see JavaScript example below).
-3.  **Add images:**
-    *   Upload your images to the `images` folder.
-    *   Update `links.json` with image information (URL, source, etc.).
-    *   Make a pull request (see [Contributing])!
-## Using `links.json` (JavaScript Example)
-
-```javascript
-const axios = require('axios');
-
-axios.get('https://raw.githubusercontent.com/rynxzyy/blue-archive-r-img/refs/heads/main/links.json')
-  .then(response => {
-    const imageData = response.data;
-    imageData.forEach(item => {
-      console.log("URL:", item);
-    });
-  })
-  .catch(error => {
-    console.error("Error fetching image URLs:", error);
-  });
+```text
+https://raw.githubusercontent.com/eshitax/blue-archive/refs/heads/main/links.json
 ```
 
-## Contributing
+### 💻 JavaScript
 
-Feel free to contribute! The more images, the merrier. Please make sure the images are:
+```javascript
+fetch('https://raw.githubusercontent.com/eshitax/blue-archive/refs/heads/main/links.json')
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(console.error);
+```
 
-*  Related to Blue Archive (official art or fan art).
-*  Decent quality. (Images should be clear and not blurry or pixelated.)
+## 🤝 Contributing
 
-## License
+Add quality **Blue Archive** artwork to `images/`, update `links.json`, and submit a Pull Request. 🌸
 
-All images belong to their respective creators and publishers. This repository is just for non-commercial fun.
+## ⚖️ Credits
+
+Images belong to their respective creators and publishers.
+
+**👤 Author:** Mueid Mursalin RIfat
+**💙 Project:** ShadowX Blue-Archive Image
